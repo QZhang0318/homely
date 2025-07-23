@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home Value Evaluation</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+
+
+<body>
+<div class="main-container">
+  <div class="left-panel">
+    <h1>Homely: Assess what drives your home's value</h1>
+    <p class="subtitle">Created by UC Berkeley MIDS Data Scientists: Louis Yeung, Qiong Zhang, Mohammed Elzubeir</p>
+  
+    <p style="max-width: 700px; font-size: 15px; line-height: 1.5; margin-bottom: 20px;">
+  We're buildng a transparent home valuation tool that helps buyers and sellers understand what a home is worth -- and why. Unlike other black-box platforms, our product breaks down how features contribute to a property's value. You can also personalize your preferences, explore "What-if" scenarios, and gain confidence in one of life's biggest financial decisions. Our goal is to make home pricing clear, fair, and interactive.
+  Now, Let's start our journey by entering the first address below!
+    </p>
+    <div id="searchContainer" style="display: flex; align-items: center; gap: 20px; margin-bottom: 8px;">
+     <input id="searchBox" list="addressList" placeholder="Enter address..." style="width: 600px;">
+     <datalist id="addressList"></datalist>
+     <button id="searchBtn">Search</button>
+</div>
+<p id="error" style="color:red;"></p>
+
+
+    <div id="map"></div>
+  </div>
+ <img src="icon.png" class="logo-gap" alt="Homely logo">
+  <div class="right-panel">
+    <div class="info-box" id="homeFeaturesBox">
+      <h2>Home Features</h2>
+      <div class="feature-row"><span>Bedrooms:</span> <span id="bedrooms">--</span></div>
+      <div class="feature-row"><span>Bathrooms:</span> <span id="bathrooms">--</span></div>
+      <div class="feature-row"><span>Year Built:</span> <span id="yearBuilt">--</span></div>
+      <div class="feature-row"><span>Sq. Footage:</span> <span id="sqft">--</span></div>
+      <div class="feature-row"><span>Units:</span> <span id="units">--</span></div>
+    </div>
+
+    <div class="info-box" id="valueBox">
+      <h2>Home Value</h2>
+      <div><strong>Estimated Value:</strong> $<span id="estimatedValue">--</span></div>
+      <div><strong>What-if Value:</strong> $<span id="whatIfValue">--</span></div>
+    </div>
+
+    <div class="info-box" id="whatIfBox">
+      <h2>What-if Features</h2>
+      <div class="feature-row"><span>Bedrooms:</span> <input id="inputBedrooms" type="number" /></div>
+      <div class="feature-row"><span>Bathrooms:</span> <input id="inputBathrooms" type="number" /></div>
+      <div class="feature-row"><span>Year Built:</span> <input id="inputYearBuilt" type="number" /></div>
+      <div class="feature-row"><span>Sq. Footage:</span> <input id="inputSqft" type="number" /></div>
+      <div class="feature-row"><span>Units:</span> <input id="inputUnits" type="number" /></div>
+      <br>
+      <button id="whatIfBtn">Calculate What-if Value</button>
+    </div>
+
+    <div class="info-box" id="shapBox">
+      <h2>What's driving the home's value?</h2>
+      <div id="shapValues">[SHAP values go here]</div>
+    </div>
+  </div>
+</div>
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+

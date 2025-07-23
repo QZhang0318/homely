@@ -1,0 +1,94 @@
+
+body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+    }
+
+    .left-panel {
+      flex: 2;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .main-container {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+    .logo-gap {
+       width: 120px;
+       height: 200px;
+       margin:10px 0 10px auto;
+       display: block;
+       opacity: 0.9;
+     }
+
+    .right-panel {
+      flex: 1;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 24px;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      color: #555;
+      margin: 0 0 20px 0;
+    }
+    #searchBox {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    #valueBox {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    #map {
+      flex-grow: 1;
+      height: 500px;
+    }
+
+    .info-box {
+      border: 1px solid #ccc;
+      padding: 15px;
+      background: #f9f9f9;
+    }
+
+    .info-box h2 {
+      font-size: 18px;
+      margin-top: 0;
+    }
+
+    .feature-row {
+      display: flex;
+      justify-content: space-between;
+      margin: 5px 0;
+    }
+
+    .feature-row input {
+      width: 60px;
+    }
+
+
+
+
+#shapValues div {
+  margin: 4px 0;
+  font-size: 14px;
+}
