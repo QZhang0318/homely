@@ -13,12 +13,12 @@ const amenityLayers = {};
 
 // Amenity source definitions
 const amenitySources = [
-  { file: 'data/hospitals.json', label: 'Hospitals', iconUrl: 'static/hospitals.png' },
-  { file: 'data/fire_stations.json', label: 'Fire Stations', iconUrl: 'static/firestations.png' },
-  { file: 'data/schools.json', label: 'Schools', iconUrl: 'static/schools.png' },
-  { file: 'data/arts_and_rec.json', label: 'Recreation', iconUrl: 'static/art.png' },
-  { file: 'data/transportation.json', label: 'Transportation', iconUrl: 'static/bus.png' },
-  { file: 'data/physical_features.json', label: 'Physical Features', iconUrl: 'static/park.png' }, 
+  { file: 'data/hospitals.json', label: 'Hospitals', iconUrl: 'images/hospitals.png' },
+  { file: 'data/fire_stations.json', label: 'Fire Stations', iconUrl: 'images/firestations.png' },
+  { file: 'data/schools.json', label: 'Schools', iconUrl: 'images/schools.png' },
+  { file: 'data/arts_and_rec.json', label: 'Recreation', iconUrl: 'images/art.png' },
+  { file: 'data/transportation.json', label: 'Transportation', iconUrl: 'images/bus.png' },
+  { file: 'data/physical_features.json', label: 'Physical Features', iconUrl: 'images/park.png' }, 
 ];
 
 // Initialize layer groups for each amenity
@@ -164,7 +164,7 @@ const whatIfData = {
 
 console.log("Sending what-if data:", whatIfData);
 
-  fetch('http://127.0.0.1:5000/predict', {
+  fetch('/predict', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'

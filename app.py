@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template 
 from flask_cors import CORS
 import joblib
 import pandas as pd
@@ -14,7 +14,7 @@ app = Flask(__name__)
 CORS(app)
 @app.route("/")
 def home():
-    return "<h1>🏠 Welcome to Homely</h1><p>Your backend is up and running.</p>"
+    return render_template("index.html")
 
 # Define feature structure
 categorical_cols = ['City Tax Rate Area', 'Roll Year', 'Property Use Type', 'Zip Code.1', 'Year Built', 'Effective Year']
