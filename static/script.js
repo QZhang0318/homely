@@ -13,12 +13,12 @@ const amenityLayers = {};
 
 // Amenity source definitions
 const amenitySources = [
-  { file: 'data/hospitals.json', label: 'Hospitals', iconUrl: 'images/hospitals.png' },
-  { file: 'data/fire_stations.json', label: 'Fire Stations', iconUrl: 'images/firestations.png' },
-  { file: 'data/schools.json', label: 'Schools', iconUrl: 'images/schools.png' },
-  { file: 'data/arts_and_rec.json', label: 'Recreation', iconUrl: 'images/art.png' },
-  { file: 'data/transportation.json', label: 'Transportation', iconUrl: 'images/bus.png' },
-  { file: 'data/physical_features.json', label: 'Physical Features', iconUrl: 'images/park.png' }, 
+  { file: '/static/data/hospitals.json', label: 'Hospitals', iconUrl: '/static/images/hospitals.png' },
+  { file: '/static/data/fire_stations.json', label: 'Fire Stations', iconUrl: '/static/images/firestations.png' },
+  { file: '/static/data/schools.json', label: 'Schools', iconUrl: '/static/images/schools.png' },
+  { file: '/static/data/arts_and_rec.json', label: 'Recreation', iconUrl: '/static/images/art.png' },
+  { file: '/static/data/transportation.json', label: 'Transportation', iconUrl: '/static/images/bus.png' },
+  { file: '/static/data/physical_features.json', label: 'Physical Features', iconUrl: '/static/images/park.png' }, 
 ];
 
 // Initialize layer groups for each amenity
@@ -27,7 +27,7 @@ amenitySources.forEach(source => {
 });
 
 
-fetch('data/houses.json')
+fetch('/static/data/houses.json')
   .then(res => res.json())
   .then(houses => {
     houseData = houses;
